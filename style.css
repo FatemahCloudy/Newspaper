@@ -1,0 +1,174 @@
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Times New Roman', Times, serif;
+    line-height: 1.6;
+    color: #333333;
+    background-color: whitesmoke;
+}
+
+/* headlines */
+.headline {
+    background-color: darkslategray;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    border-bottom: 5px solid darkgreen;
+}
+
+.headline h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.date {
+    font-style: italic;
+    margin-top: 10px;
+}
+
+/* Navigation bar */
+.navigation {
+    background-color: seagreen;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    transition: opacity 0.3s;
+}
+
+.navigation.scrolled {
+    opacity: 0.9;
+}
+
+.navigation ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+}
+
+.navigation li {
+    display: inline-block;
+}
+
+.navigation a {
+    color: white;
+    text-decoration: none;
+    padding: 15px 20px;
+    display: block;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.navigation a:hover {
+    background-color: darkgreen;
+}
+
+/* Content layout */
+.content {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 0 20px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.main-story {
+    flex: 2;
+    min-width: 60%;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    margin-bottom: 20px;
+}
+
+.main-story h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: seagreen;
+    border-bottom: 2px solid seagreen;
+    padding-bottom: 10px;
+}
+
+.secondary-story {
+    flex: 1;
+    min-width: 40%;
+    padding: 0 20px;
+}
+
+.story {
+    background-color: white;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.story h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.sidebar {
+    flex: 1;
+    min-width: 25%;
+    padding: 20px;
+    background-color: #f0f0f0;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.sidebar h4 {
+    font-size: 1.2rem;
+    margin: 20px 0 10px;
+    color: darkgreen;
+}
+
+/* Float and images */
+.float-left {
+    float: left;
+    margin: 0 20px 20px 0;
+    max-width: 50%;
+}
+
+.float-right {
+    float: right;
+    margin: 0 0 20px 20px;
+    max-width: 50%;
+}
+
+/* Footer */
+.footer {
+    background-color: darkslategray;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 30px;
+    border-top: 5px solid darkgreen;
+}
+
+.footer p {
+    margin: 5px 0;
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+    .content {
+        flex-direction: column;
+    }
+
+    .main-story, .secondary-stories, .sidebar {
+        min-width: 100%;
+    }
+
+    .main-nav ul {
+        flex-wrap: wrap;
+    }
+
+    .main-nav a {
+        padding: 10px 15px;
+    }
+}
